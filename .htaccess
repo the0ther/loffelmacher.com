@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
-   RewriteEngine on
-   RewriteRule    ^$ app/webroot/    [L]
-   RewriteRule    (.*) app/webroot/$1 [L]
+   RewriteEngine 	on
+   RewriteCond 		%{HTTP_HOST} ^loffelmacher.com$
+   RewriteRule    	^$ app/webroot/    [L]
+   RewriteCond 		%{HTTP_HOST} ^loffelmacher.com$
+   RewriteRule    	(.*) app/webroot/$1 [L]
 </IfModule>
