@@ -1,3 +1,9 @@
 html, body {
-	background {url(/img/ulysses.jpg) 0 0;}
+	background: url(/img/ulysses.jpg);
+    background-repeat: no-repeat;
+    /*background-size: 100% 100%;*/
+    /*background-origin: content-box*/
+	 background-size: cover;
 }
+h1, h2 {color:#fff;}
+

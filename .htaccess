@@ -1,7 +1,20 @@
 <IfModule mod_rewrite.c>
    RewriteEngine 	on
-   RewriteCond 		%{HTTP_HOST} ^loffelmacher.com$
-   RewriteRule    	^$ app/webroot/    [L]
-   RewriteCond 		%{HTTP_HOST} ^loffelmacher.com$
-   RewriteRule    	(.*) app/webroot/$1 [L]
+   
+   # default cakephp .htaccess block below
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+   
+   # the block below makes it work on godaddy hosting
+   #RewriteBase		/loffelmacher.com
+   #RewriteCond 		%{HTTP_HOST} ^loffelmacher.com$
+   #RewriteRule    	^$ app/webroot/    [L]
+   #RewriteCond 		%{HTTP_HOST} ^loffelmacher.com$
+   #RewriteRule    	(.*) app/webroot/$1 [L]
+   
+   # this was an attempt to use the above snippet to work on home-pc branch
+   #RewriteCond 		%{HTTP_HOST} ^loffelmacher.localhost$
+   #RewriteRule    	^$ app/webroot/    [L]
+   #RewriteCond 		%{HTTP_HOST} ^loffelmacher.localhost$
+   #RewriteRule    	(.*) app/webroot/$1 [L]
 </IfModule>
